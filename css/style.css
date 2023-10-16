@@ -35,6 +35,7 @@ Character
   --bluebell: #9792e4;
   --goldentainoi: #fdc15f;
   --nightrider: #333333;
+  --wedgewood: #5a6e7f;
 }
 
 /*
@@ -61,6 +62,15 @@ Common
 
 .flex {
   display: flex;
+}
+
+.element {
+  width: calc((100% - 48px) / 3);
+  align-self: stretch;
+}
+
+section {
+  background-color: var(--bluebell);
 }
 
 /*
@@ -98,6 +108,29 @@ header .container .col .bars {
 Main
 ******
 */
+
+.core-business .container {
+  flex-direction: column;
+  padding: 50px 32px 104px;
+  border-style: dashed;
+}
+
+.core-business .container .row,
+.core-business .container {
+  gap: 24px;
+}
+
+.core-business .container .row .element {
+  color: var(--wedgewood);
+  background-color: var(--cornflowerblue);
+  text-align: center;
+  font-weight: bold;
+}
+
+.core-business .container .row:first-child .element:first-child {
+  text-align: start;
+  flex-grow: 1;
+}
 
 /*
 ******
@@ -138,7 +171,22 @@ Media Queries
   }
 }
 
+.core-business .container .row .element {
+  flex-direction: column;
+}
+
 /* Mobile 0-576px */
 
 @media screen and (max-width: 576px) {
+  .core-business .container {
+    padding-bottom: 82px;
+  }
+
+  .core-business .container .row {
+    flex-direction: column;
+  }
+
+  .core-business .container .row .element {
+    width: 100%;
+  }
 }
