@@ -109,6 +109,8 @@ Main
 ******
 */
 
+/* Sezione core-business */
+
 .core-business .container {
   flex-direction: column;
   padding: 50px 32px 104px;
@@ -131,6 +133,8 @@ Main
   text-align: start;
   flex-grow: 1;
 }
+
+/* Fine Sezione core-business */
 
 /*
 ******
