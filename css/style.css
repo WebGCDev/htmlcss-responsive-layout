@@ -10,17 +10,58 @@ Reset
   box-sizing: border-box;
 }
 
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*
+******
+Character
+******
+*/
+
+:root {
+  --blue: #0084fd;
+  --cornflowerblue: #b5ddff;
+  --bluebell: #9792e4;
+  --goldentainoi: #fdc15f;
+  --nightrider: #333333;
+}
+
 /*
 ******
 Debug
 ******
 */
 
+.col {
+  border-style: dashed;
+}
+
 /*
 ******
 Common
 ******
 */
+
+.container {
+  margin: 0 auto;
+  padding: 0 32px;
+  max-width: 1200px;
+}
+
+.flex {
+  display: flex;
+}
 
 /*
 ******
@@ -34,6 +75,24 @@ Header
 ******
 */
 
+header .container {
+  align-items: center;
+  justify-content: space-between;
+}
+
+header {
+  background-color: var(--blue);
+}
+
+header .container ul {
+  gap: 34px;
+}
+
+header .container .col .bars {
+  color: white;
+  display: none;
+}
+
 /*
 ******
 Main
@@ -45,3 +104,26 @@ Main
 Footer
 ******
 */
+
+/*
+******
+Media Queries
+******
+*/
+
+/* Tablet 0-768px */
+
+@media screen and (max-width: 768px) {
+  header .container .col .bars {
+    display: block;
+  }
+
+  header .container ul {
+    display: none;
+  }
+}
+
+/* Mobile 0-576px */
+
+@media screen and (max-width: 576px) {
+}
