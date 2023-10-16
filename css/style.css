@@ -105,6 +105,21 @@ Footer
 ******
 */
 
+footer .credits p:first-child {
+  border-style: dashed;
+}
+
+footer {
+  background-color: var(--nightrider);
+  text-align: center;
+}
+
+footer .credits {
+  color: white;
+  text-align: center;
+  border-style: dashed;
+}
+
 /*
 ******
 Media Queries
