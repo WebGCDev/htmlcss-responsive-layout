@@ -185,9 +185,9 @@ Media Queries
 ******
 */
 
-/* Tablet 0-768px */
+/* Tablet 768-992px */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   header .container .col .bars {
     display: block;
   }
@@ -213,9 +213,9 @@ Media Queries
   /* Planning */
 }
 
-/* Mobile 0-576px */
+/* Mobile 0-768px */
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .core-business .container {
     padding-bottom: 82px;
   }
