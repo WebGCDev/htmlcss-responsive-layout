@@ -23,6 +23,10 @@ ul {
   list-style-type: none;
 }
 
+section:nth-of-type(even) {
+  background-color: var(--bluebell);
+}
+
 /*
 ******
 Character
@@ -136,6 +140,24 @@ Main
 
 /* Fine Sezione core-business */
 
+/* Sezione Planning */
+
+.planning .container {
+  padding: 135px 165px 64px;
+}
+
+.planning .container .col.dx {
+  text-align: center;
+  margin-top: 180px;
+  background-color: white;
+}
+
+.planning .container .col {
+  width: 50%;
+}
+
+/* Sezione Planning */
+
 /*
 ******
 Footer
@@ -173,10 +195,22 @@ Media Queries
   header .container ul {
     display: none;
   }
-}
 
-.core-business .container .row .element {
-  flex-direction: column;
+  .core-business .container .row .element {
+    flex-direction: column;
+  }
+
+  /* Planning */
+
+  .planning .container {
+    padding: 135px 165px 64px;
+  }
+
+  .planning .container .col.dx {
+    margin-top: 0;
+  }
+
+  /* Planning */
 }
 
 /* Mobile 0-576px */
@@ -193,4 +227,14 @@ Media Queries
   .core-business .container .row .element {
     width: 100%;
   }
+
+  /* Planning */
+
+  .planning .container {
+    gap: 40px;
+    padding: 70px 32px 65px;
+    flex-direction: column;
+  }
+
+  /* Planning */
 }
