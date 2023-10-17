@@ -5,6 +5,7 @@ Reset
 */
 
 * {
+  font-family: 'PT+Sans', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -25,6 +26,11 @@ ul {
 
 section:nth-of-type(even) {
   background-color: var(--bluebell);
+}
+
+button {
+  background-color: unset;
+  border: unset;
 }
 
 /*
@@ -49,7 +55,13 @@ Debug
 */
 
 .col {
-  border-style: dashed;
+  /* border-style: dashed; */
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: white;
 }
 
 /*
@@ -73,7 +85,7 @@ Common
   align-self: stretch;
 }
 
-section {
+section:nth-of-type(even) {
   background-color: var(--bluebell);
 }
 
@@ -92,19 +104,29 @@ Header
 header .container {
   align-items: center;
   justify-content: space-between;
+  padding-top: 19px;
+  padding-top: 19px;
 }
 
 header {
   background-color: var(--blue);
+  padding-bottom: 20px;
 }
 
 header .container ul {
+  color: white;
   gap: 34px;
+  align-items: center;
 }
 
 header .container .col .bars {
   color: white;
   display: none;
+  font-size: 1.25rem;
+}
+
+header .container .btn {
+  font-size: 1rem;
 }
 
 /*
@@ -116,26 +138,71 @@ Main
 /* Sezione core-business */
 
 .core-business .container {
-  flex-direction: column;
+  flex-wrap: wrap;
   padding: 50px 32px 104px;
-  border-style: dashed;
-}
-
-.core-business .container .row,
-.core-business .container {
   gap: 24px;
+  /* border-style: dashed; */
 }
 
-.core-business .container .row .element {
+.core-business .container .element {
   color: var(--wedgewood);
   background-color: var(--cornflowerblue);
   text-align: center;
   font-weight: bold;
+  border-radius: 20px;
+  padding: 32px 24px 30px;
 }
 
-.core-business .container .row:first-child .element:first-child {
+.core-business .container .element:first-child {
   text-align: start;
   flex-grow: 1;
+}
+
+.core-business .container .element p {
+  line-height: 2rem;
+}
+
+.core-business .container .element h2 {
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: var(--blue);
+}
+
+.core-business .container .element i {
+  padding-bottom: 24px;
+  font-size: 80px;
+  color: var(--blue);
+}
+
+.core-business .container:first-child .element:first-child {
+  text-align: start;
+  padding-bottom: 0;
+  width: calc(((100% - 48px) / 3) * 2 + 24px);
+}
+
+.core-business .container:first-child .element:first-child .col.sx {
+  padding-bottom: 62px;
+  padding-right: 28px;
+}
+
+.core-business .container:first-child .element:first-child .col.sx button {
+  color: white;
+  background-color: var(--blue);
+  padding: 10px 50px;
+  font-size: inherit;
+  margin-top: 32px;
+}
+
+.core-business .container:first-child .element:first-child .col.sx button i {
+  color: white;
+  font-size: inherit;
+  padding-bottom: 0;
+  padding-right: 8px;
+}
+
+.core-business.container:first-child .element:first-child .col.dx {
+  padding-right: 54px;
+  align-items: flex-end;
 }
 
 /* Fine Sezione core-business */
@@ -165,7 +232,7 @@ Footer
 */
 
 footer .credits p:first-child {
-  border-style: dashed;
+  /* border-style: dashed; */
 }
 
 footer {
@@ -176,7 +243,7 @@ footer {
 footer .credits {
   color: white;
   text-align: center;
-  border-style: dashed;
+  /* border-style: dashed; */
 }
 
 /*
@@ -196,8 +263,16 @@ Media Queries
     display: none;
   }
 
-  .core-business .container .row .element {
+  .core-business .container .element {
     flex-direction: column;
+  }
+
+  .core-business .container:first-child .element:first-child .col.dx {
+    width: 65%;
+  }
+
+  .core-business .container .element i {
+    font-size: 70px;
   }
 
   /* Planning */
@@ -218,14 +293,27 @@ Media Queries
 @media screen and (max-width: 768px) {
   .core-business .container {
     padding-bottom: 82px;
-  }
-
-  .core-business .container .row {
     flex-direction: column;
   }
 
-  .core-business .container .row .element {
+  .core-business .container .element,
+  .core-business .container:first-child .element:first-child {
     width: 100%;
+  }
+
+  .core-business .container .element,
+  .core-business .container:first-child .element:first-child .col.dx {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .core-business .container:first-child .element:first-child .col.sx button {
+    font-size: 16px;
+  }
+
+  .core-business .container .element p {
+    line-height: 24px;
+    font-size: 14px;
   }
 
   /* Planning */
