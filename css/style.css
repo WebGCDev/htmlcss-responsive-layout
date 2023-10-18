@@ -286,18 +286,26 @@ Footer
 
 footer .credits p:first-child {
   /* border-style: dashed; */
+  padding-bottom: 70px;
 }
 
 footer {
   background-color: var(--nightrider);
   text-align: center;
+  padding: 40px 0 40px;
 }
 
 footer .credits {
   color: white;
   text-align: center;
   margin: 0 auto;
+  width: 25%;
   /* border-style: dashed; */
+}
+
+footer .credits p a {
+  color: var(--bluebell);
+  text-decoration: underline;
 }
 
 /*
