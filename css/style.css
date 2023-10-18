@@ -211,6 +211,7 @@ Main
 
 .planning .container {
   padding: 135px 165px 64px;
+  gap: 4.375rem;
 }
 
 .planning .container .col.dx {
@@ -221,6 +222,58 @@ Main
 
 .planning .container .col {
   width: 50%;
+  flex-direction: column;
+}
+
+.planning .container .col.sx {
+  align-items: flex-start;
+  color: white;
+}
+
+.planning .container .col.sx p {
+  line-height: 1.7rem;
+  font-size: 1rem;
+}
+
+.planning .container .col.sx h2 {
+  padding-bottom: 52px;
+  font-size: 2.25rem;
+}
+
+.planning .container .col.sx img {
+  padding-bottom: 135px;
+}
+
+.planning .container .col.dx {
+  margin-top: 182px;
+  padding: 32px 40px 25px;
+  text-align: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 55px;
+}
+
+.planning .container .col.dx img {
+  padding-bottom: 25px;
+  width: 75%;
+}
+
+.planning .container .col.dx h4 {
+  padding-bottom: 2px;
+  font-size: 1.5rem;
+}
+
+.planning .container .col.dx p {
+  font-size: 1.25rem;
+  margin-top: 15px;
+}
+
+.planning .container .col.dx i {
+  background-color: var(--bluebell);
+  border-radius: 50%;
+  font-size: 16px;
+  margin-top: 23px;
+  padding: 18px 20px;
 }
 
 /* Sezione Planning */
@@ -243,6 +296,7 @@ footer {
 footer .credits {
   color: white;
   text-align: center;
+  margin: 0 auto;
   /* border-style: dashed; */
 }
 
